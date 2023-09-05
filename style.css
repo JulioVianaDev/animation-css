@@ -10,37 +10,33 @@ html,body{
   overflow: hidden;
 }
 
-.orbit{
+.orbit {
   border: 1px dashed #666;
 }
+
 #sun,
 .orbit,
 .orbit + div,
-.orbit + div > div{
+.orbit + div > div {
   position: absolute;
 }
 
 #sun,
 .orbit,
-.orbit + div{
+.orbit + div {
   top: 50%;
   left: 50%;
 }
+.orbit + div > div {
+  top: 0;
+  left: 50%;
+}
 
-.orbit + div > div{
-  top: 0;
-  left: 50%;
-}
-.orbit + div div{
-  top: 0;
-  left: 50%;
-}
 .orbit,
 .orbit + div div,
 #earth {
   border-radius: 50%;
 }
-
 
 #sun{
   height: 200px;
@@ -65,7 +61,21 @@ html,body{
   margin-left: -140px;
   margin-top: -140px;
 }
-
+#venus{
+  margin-top: -20px;
+  margin-left: -20px;
+  height: 40px;
+  width: 40px;
+  background-color: #f21111;
+  box-shadow: 0 0 34px #c75538;
+}
+.venus,
+.venus-spin{
+  width: 370px;
+  height: 370px;
+  margin-left: -185px;
+  margin-top: -185px;
+}
 @keyframes spin-right{
   100%{
     transform: rotate(360deg);
@@ -74,4 +84,7 @@ html,body{
 
 .mercury-spin{
   animation: spin-right 8.8s linear infinite;
+}
+.venus-spin{
+  animation: spin-right 22s linear infinite;
 }
